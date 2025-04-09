@@ -27,6 +27,7 @@
             $isChauAu = isset($categoryMap['chau-au']);
             $isTrungQuoc = isset($categoryMap['trung-quoc']);
             $isHanQuoc18 = isset($categoryMap['han-quoc-18-']);
+            $isHentai = isset($categoryMap['hentai']);
             
             // Xác định loại nhãn (ribbon) theo thứ tự ưu tiên
             $ribbonText = 'Full HD'; // Mặc định là Full HD
@@ -35,6 +36,8 @@
             if ($isVietsub) {
                 if ($isKhongChe) {
                     $ribbonText = 'Vietsub - Không Che';
+                } elseif ($isHentai) {
+                    $ribbonText = 'Hentai Vietsub';
                 } elseif ($isHanQuoc18) {
                     $ribbonText = 'Vietsub Hàn Quốc 18+';
                 } elseif ($isChauAu) {
@@ -50,6 +53,8 @@
                     $ribbonText = 'Việt Nam Clip';
                 } elseif ($isKhongChe) {
                     $ribbonText = 'Không Che';
+                } elseif ($isHentai) {
+                    $ribbonText = 'Hentai';
                 } elseif ($isHanQuoc18) {
                     $ribbonText = 'Hàn Quốc 18+';
                 } elseif ($isChauAu) {
